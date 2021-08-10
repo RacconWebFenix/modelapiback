@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const skycraperRouter = require("./routes/skycraper.routes");
-const port = 3002;
 const mongoose = require("mongoose");
 const Skycraper = require("./models/skycrapers");
 const cors = require("cors");
@@ -13,7 +12,7 @@ dotenv.config();
 
 process.env.USERDB;
 process.env.PWDDB;
-
+process.env.PORT;
 mongoose.connect(
   "mongodb+srv://" +
     process.env.USERDB +
@@ -35,6 +34,6 @@ app.use(cors(corsOptions));
 
 app.use(skycraperRouter);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.info("API Started!");
 });
