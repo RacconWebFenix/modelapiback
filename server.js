@@ -25,12 +25,6 @@ mongoose.connect(
   }
 );
 
-const corsOptions = {
-  origin: "https://app-reacttest.herokuapp.com",
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
 
 app.use(skycraperRouter);
 
