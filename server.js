@@ -11,14 +11,14 @@ app.use(cors());
 
 dotenv.config();
 
-const user = process.env.USERDB;
-const pass = process.env.PWDDB;
+process.env.USERDB;
+process.env.PWDDB;
 
 mongoose.connect(
   "mongodb+srv://" +
-    user +
+    process.env.USERDB +
     ":" +
-    pass +
+    process.env.PWDDB +
     "@clusterbluee.48pmq.mongodb.net/skycrapers?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
