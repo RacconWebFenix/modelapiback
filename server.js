@@ -26,7 +26,7 @@ mongoose.connect(
 );
 
 const corsOptions = {
-  origin: "https://app-reacttest.herokuapp.com/",
+  origin: "https://app-reacttest.herokuapp.com",
   optionsSuccessStatus: 200,
 };
 
