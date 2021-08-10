@@ -11,11 +11,15 @@ app.use(cors());
 
 dotenv.config();
 
-process.env.USERDB;
-process.env.PWDDB;
+const user = process.env.USERDB;
+const pass = process.env.PWDDB;
 
 mongoose.connect(
-  `mongodb+srv://${process.env.USERDB}:${process.env.PWDDB}@clusterbluee.48pmq.mongodb.net/skycrapers?retryWrites=true&w=majority`,
+  "mongodb+srv://" +
+    user +
+    ":" +
+    pass +
+    "@clusterbluee.48pmq.mongodb.net/skycrapers?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
