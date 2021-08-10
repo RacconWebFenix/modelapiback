@@ -26,7 +26,7 @@ mongoose.connect(
 );
 
 const corsOptions = {
-  origin: "https://app-reacttest.herokuapp.com/skycraper",
+  origin: "https://app-reacttest.herokuapp.com/personagens",
   optionsSuccessStatus: 200,
 };
 
